@@ -23,12 +23,12 @@ const battleInit = () => {
   const nameFighter2 = battle[1].name;
 
   pokemon1.innerHTML = `
-  <h2 id="nombre1">${nameFighter1}</h2><img src="${images[padZero(idFighter1)]}" alt="${nameFighter1}"><div class="boton">
+  <h2 id="nombre1">${nameFighter1.toUpperCase()}</h2><img class="pokemonPic" src="${images[padZero(idFighter1)]}" alt="${nameFighter1}"><div class="botonAttack">
   <button id="button">Attack</button>
 </div>`;
 
   pokemon2.innerHTML = `
-  <h2 id="nombre2">${nameFighter2}</h2><img src="${images[padZero(idFighter2)]}" alt="${nameFighter2}"><div class="boton">
+  <h2 id="nombre2">${nameFighter2.toUpperCase()}</h2><img class="pokemonPic" src="${images[padZero(idFighter2)]}" alt="${nameFighter2}"><div class="botonAttack">
   <button id="button">Attack</button>
 </div>`;
 }
@@ -40,5 +40,5 @@ const battle = createBattle();
 
 const pokemon1 = document.getElementById("pokemon1");
 const pokemon2 = document.getElementById("pokemon2");
-document.getElementById("button").addEventListener('click', battleInit);
+document.getElementById("buttonStart").addEventListener('click', battleInit);
 

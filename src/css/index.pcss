@@ -1,46 +1,71 @@
-/*** index.pcss ***/
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
 body {
-    background-color: lightblue;
-    margin: 50px auto;
     background-image: url('../assets/background.jpg');
-    background-position:bottom;
-    height:100vh;
+    background-position: bottom;
+    height: 97vh;
 }
 
 .battle {
-   display: flex;
-   flex-direction: row;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
 }
 
 #pokemon1, #pokemon2 {
-  width: 333px;
+  width: 400px;
   height: 700px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: auto;
+
 }
 
-h2{
-  align-self: center;
-}
 
 .boton {
-    width: 333px;
-    height: 700px;
-    display: flex;
-    justify-content: center;
+  width: 333px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#button{
-    position: relative;
-    top: 50px;
-    width: 200px;
-    height: 50px;
-    border-radius: 12px;
-    box-shadow: 5px 5px 15px black;
-    font-size: 20px;
-    cursor: pointer;
+.botonAttack {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttonStart{
+  width: 300px;
+  height: 75px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px black;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#buttonStart:hover {
+    background-color: #BDB7B7;
   }
+  
+  #buttonStart:active {
+    background-color: #6D6767;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+#button{
+  width: 250px;
+  height: 50px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px black;
+  font-size: 25px;
+  cursor: pointer;
+}
   
   #button:hover {
     background-color: #BDB7B7;
@@ -54,4 +79,14 @@ h2{
 
   .hidden {
     display: none;
+  }
+
+  .pokemonPic {
+    width: 350px;
+    height: 250px;
+  }
+
+  h2 {
+    font-size: 50px;
+    font-family: 'Press Start 2P', cursive;
   }
