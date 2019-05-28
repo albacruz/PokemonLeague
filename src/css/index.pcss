@@ -2,19 +2,24 @@
 body {
     background-color: lightblue;
     margin: 50px auto;
+    background-image: url('../assets/background.jpg');
 }
 
 .battle {
    display: flex;
-   flex-direction: row; 
-   justify-content: center;
+   flex-direction: row;
 }
 
 #pokemon1, #pokemon2 {
-    width: 333px;
-    height: 700px;
-    display: flex;
-    justify-content: center;
+  width: 333px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+h2{
+  align-self: center;
 }
 
 .boton {
@@ -43,4 +48,8 @@ body {
     background-color: #6D6767;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+  }
+
+  .hidden {
+    display: none;
   }
