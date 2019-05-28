@@ -40,5 +40,13 @@
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albacruz/PokemonLeague.git"
+  },
+  "bugs": {
+    "url": "https://github.com/albacruz/PokemonLeague/issues"
+  },
+  "homepage": "https://github.com/albacruz/PokemonLeague#readme"
 }
