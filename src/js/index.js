@@ -11,12 +11,42 @@ const createBattle = () => {
   return battleArray;
 }
 
+const hideProgressBar = () => {
+  document.querySelector('#barF1').classList.add('hidden');
+  document.querySelector('#barF2').classList.add('hidden');
+}
 const fighterAttacks = () => {
   document.querySelector('#button1').classList.toggle('hidden');
   document.querySelector('#button2').classList.toggle('hidden');
 }
 
+const newBattle = () => location.reload();
+
+const checkLife = () => {
+  console.log('Esto es lifeF1 = ', parseInt(lifeF1));
+  console.log('Esto es lifeF2 = ', parseInt(lifeF2));
+  const btn = document.querySelector('.boton');
+
+  if(parseInt(lifeF1) <= 0){
+    document.querySelector('#button2').classList.add('hidden');
+    hideProgressBar();
+    btn.classList.remove('hidden');
+    btn.textContent = 'New battle';
+    btn.addEventListener('click', newBattle);
+  }
+  if(parseInt(lifeF2) <= 0){
+    document.querySelector('#button1').classList.add('hidden');
+    hideProgressBar();
+    alert('Ganaste');
+    btn.classList.remove('hidden');
+    btn.textContent = 'New battle';
+    btn.addEventListener('click', newBattle);
+  }
+  
+}
+
 const receiveAttack = () => {
+
   const barF1 = document.getElementById("barF1");
   const barF2 = document.getElementById("barF2");
 
@@ -25,6 +55,7 @@ const receiveAttack = () => {
     barF1.style.width = lifeF1;
     barF1.textContent = lifeF1;
     pos = 1;
+    checkLife();
     fighterAttacks();
     fight("button1");
   }
@@ -33,9 +64,11 @@ const receiveAttack = () => {
     barF2.style.width = lifeF2;
     barF2.textContent = lifeF2;
     pos = 0;
+    checkLife();
     fighterAttacks();
     fight("button2");
   }
+
 }
 
 const fight = (btn) => document.getElementById(btn).addEventListener('click', receiveAttack);
